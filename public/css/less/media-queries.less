@@ -1,0 +1,101 @@
+// main: lightgrid.less
+
+/* ----------------------------------------------------------------
+ * media-queries.less
+ * 
+ * All media queries are defined here
+ * Don't forget to put the meta tag <meta name="viewport" content="width=device-width">
+ * inside the head tag
+ * Extra media queries taken from http://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints
+ * ---------------------------------------------------------------- */
+
+
+@media only screen and (min-width : 1px) and (max-width : 480px) {
+	.col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+	.col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+		margin:0;
+		width:100%!important;
+	}	
+	
+	.header-nav,
+	.main-container,
+	.secondary-container,
+	.footer-container,
+	.hero-container-inner {
+		width: 90%;
+	}
+	
+	.nav-item {
+		padding: 10px;
+	}
+	
+	
+	.job-title {
+		line-height: 1.2em;
+	}
+	
+	.job-location > span {
+		display: none;
+	}
+	
+	.job-title {
+		line-height: 1.1em;
+    font-size: 1.5em;
+		word-break: break-word;
+	}
+	
+	.nav-title {
+		height: 46px;
+	}
+	
+	.nav-title > .logo {
+		height: 46px;
+		display: inline-block;
+	}
+	
+	.header-title {
+		display: none;
+	}
+	
+	.nav-title:after {
+		top:8px;
+		left:~"calc(100% + 4px)";
+	}
+	
+	.module-header {
+		padding: 16px;
+	}
+
+	.module-body {
+		padding: 16px;
+	}
+	
+	.footer-title {
+    padding-bottom: 8px;
+    margin: 8px 0;
+    margin-top: 24px;
+	}
+	
+	.spinner {
+		left : ~"calc(50% - 12px)";
+	}
+	
+}
+
+@media only screen and (min-width : 481px)and (max-width : 767px) {
+    
+    .site-main {
+        width:90%;
+        left:5%;
+    }
+    
+}
+
+// Sample media queries(not used by lightgrid)
+@media only screen and (min-device-width : 768px) and (max-device-width : 1023px) {
+
+}
+
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1200px) {
+
+}

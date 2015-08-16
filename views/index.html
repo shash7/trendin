@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>
+			TREND.IN
+		</title>
+
+		{{> head-global}}
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="/css/lightgrid.css">
+
+		<script src="/js/jquery-2.1.1.min.js"></script>
+		<script src="/js/handlebars-v2.0.0.js"></script>
+   <script src="/js/mousetrap.min.js"></script>
+    <script src="/js/moment.js"></script>
+		<script src="/js/utils.js"></script>
+		<script src="/js/index.js"></script>
+
+		{{> analytics}}
+	</head>
+
+	<body>
+
+		<!-- Header -->
+		<header class="site-header">
+			<nav class="header-nav clearfix">
+				<a href="/">
+				<h1 class="nav-title"><img src="/img/logo.png"></h1>
+				</a>
+				<a class="nav-share facebook" href="http://www.facebook.com/sharer.php?u=http://trendin-mecofficalsite.rhcloud.com/http://i.imgur.com/{{url}}">
+    FB share</a>
+				<form class="nav-form row hidden" id="main-form">
+					<input type="text" name="name" placeholder="name" class="col-4">
+					<input type="email" name="email" placeholder="email" class="col-4">
+					<input type="submit" class="col-4 last" value="Save tags">
+				</form>
+				<button class="nav-item" id="tag-button">Start taggin!</button>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<section class="site-main">
+			<div class="image-container"data-image="http://i.imgur.com/{{url}}" data-raw="/{{url}}">
+			</div>
+		</section>
+
+
+		<script type="text/x-handlebars-template" id="template-comment">
+			<div class="comment" style="top:calc(\{{y}} + 6px);left:calc(\{{x}} - 98px)">
+				<textarea class="tag-input" data-x=\{{x}} data-y=\{{y}}></textarea>
+			</div>
+		</script>
+		<script type="text/x-handlebars-template" id="template-marker">
+			<div class="marker" style="top:\{{mody}};left:\{{modx}}" data-id="\{{id}}" \{{#if new}} data-new="true" \{{/if}}>
+			</div>
+		</script>
+		<script type="text/x-handlebars-template" id="template-form">
+			<form class="nav-form row" id="main-form">
+				<input type="text" name="name" placeholder="name" class="col-4" required>
+				<input type="email" name="email" placeholder="email" class="col-4" required>
+				<input type="submit" class="col-4 last" value="Save tags">
+			</form>
+		</script>
+		<script type="text/x-handlebars-template" id="template-comment-new">
+			<div class="comment-new">
+				\{{#if name}}<span class="poster">@\{{name}}</span> - \{{/if}}
+				<span class="date">\{{created}}</span>
+				<p>\{{{comment}}}</p>
+			</div>
+		</script>
+		{{> footer-global}}
+	</body>
+</html>

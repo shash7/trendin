@@ -1,0 +1,120 @@
+// main: lightgrid.less
+
+/* ----------------------------------------------------------------
+ * form.less
+ * 
+ * Basic form elements styling is defined here
+ * ---------------------------------------------------------------- */
+
+@import 'config.less';
+
+// General input styles
+input, textarea, select, button, .button {
+	margin: 0;
+	padding: 6px 7px;
+	width:100%;
+	display: inline-block;
+	
+	font-family: @body-font;
+	
+	box-sizing: border-box;
+	border: #DDD solid 1px;
+	border-radius: 3px;
+	
+	-webkit-appearance:none;
+}
+
+textarea {
+	resize: vertical;
+}
+
+// Styles for all things resembling an input element
+input[type="text"], input[type="email"], input[type="password"], textarea {
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+textarea:hover {	
+}
+
+input[type="text"]:active,
+input[type="email"]:active,
+input[type="password"]:active,
+textarea:active {
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+	outline: none;
+	border-color: #F1C40F;
+}
+
+// Styles for all things resembling a button
+input[type="button"], input[type="submit"], select, button, .button {
+	
+	background-color: @brand;
+	
+	border-color: darken(@brand, 10%);
+	color:#FFF;
+	text-align: center;
+	
+	cursor: pointer;
+	
+	border:none;
+	font-weight: 700;
+	text-shadow: 0 1px 0 rgba(0,0,0,.2);
+	    box-shadow: inset 0 1px rgba(255,255,255,.1),inset -1px 0 rgba(0,0,0,.1),inset 1px 0 rgba(0,0,0,.1),inset 0 -1px rgba(0,0,0,.6);
+	box-sizing: border-box;
+}
+
+select {
+	padding: 5px 8px;
+	background-color: #FFF;
+	border-color: #DDD;
+	color:@body-color;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+button:hover,
+.button:hover {
+	text-decoration: none;
+	background-color: darken(@brand, 10%);
+}
+
+input[type="button"]:active,
+input[type="submit"]:active,
+button:active,
+.button:active {
+	background-image: linear-gradient(to bottom,rgba(0,0,0,.12) 0,rgba(255,255,255,.12) 100%);
+}
+
+input[type="button"]:focus,
+input[type="submit"]:focus,
+select:focus,
+button:focus,
+.button:focus {
+	outline: none;
+	border-color: #F1C40F;
+}
+
+.big {
+	padding: 12px 24px;
+	font-size: 1.1em;
+}
+
+.disabled {
+	background-color: @disable!important;
+	border-color: @disable!important;
+}
+
+.danger {
+	border-color: @brand;
+}
+
+.error {
+	border-color: #F30;
+}
